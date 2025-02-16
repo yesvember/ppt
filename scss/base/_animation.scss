@@ -1,0 +1,125 @@
+@keyframes left {
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1%);
+    }
+}
+@keyframes right {
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(1%);
+    }
+}
+@keyframes leftAndRight {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+@keyframes slide {
+    0% {
+        background-position: 0 0; 
+    }
+    100% {
+        background-position: 100% 0; 
+    }
+}
+// skills
+@keyframes html {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 90%;
+    }
+}
+@keyframes css {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 90%;
+    }
+}
+@keyframes scss {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 40%;
+    }
+}
+@keyframes js {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 30%;
+    }
+}
+@keyframes PhotoShop {
+    0% {
+        height: 0;
+    }
+    100% {
+        height:80%;
+    }
+}
+// 
+@keyframes upDown {
+    0% {
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(10%);
+    }
+}
+@keyframes upDown2 {
+    0% {
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(4%);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes jelly {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.1, 0.9); 
+    }
+    50% {
+        transform: scale(0.9, 1.1); 
+    }
+    70% {
+        transform: scale(1.1, 0.9); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+  }
+  @keyframes pencil {
+    0% {
+      transform: rotate(-20deg);  
+      transform-origin: bottom center;  
+    }
+    100% {
+      transform: rotate(0deg) ;  
+      transform-origin: bottom center; 
+    }
+  }
