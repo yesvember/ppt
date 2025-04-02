@@ -186,3 +186,57 @@ let observerContact = new IntersectionObserver((event) => {
 });
 
 observerContact.observe(contactTrigger);
+const POSTER = document.querySelector('#poster');
+const posterTrigger = POSTER.querySelector('.poster-trigger');
+const posterList = POSTER.querySelectorAll('li');
+
+let observerPoster = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            if (entry.target === posterTrigger) {
+                posterList.forEach((li, index) => {
+                    li.style.opacity = "1";
+                    li.style.transform = "translateX(0)";
+                    li.style.transition = `transform 0.6s ease ${index * 0.1}s, opacity 0.6s ease ${index * 0.1}s`;
+                });
+            }
+        } else {
+            posterList.forEach((li) => {
+                li.style.opacity = "0";
+                li.style.transform = "translateX(-20%)";
+            });
+        }
+    });
+}, { threshold: 0.2 });
+
+// 옵저버 실행
+observerPoster.observe(posterTrigger);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.querySelector(".poster-modal"); // 하나의 모달만 사용
+    const modalImg = document.getElementById("modal-img");
+    const modalTriggers = document.querySelectorAll(".poster li");
+    const closeButton = document.querySelector(".close-btn");
+
+    // 포스터 클릭 시 해당 이미지로 모달 열기
+    modalTriggers.forEach((li) => {
+        li.addEventListener("click", () => {
+            const imgSrc = li.querySelector("img").src; // 클릭한 이미지의 src 가져오기
+            modalImg.src = imgSrc; // 모달 이미지 변경
+            modal.classList.add("active"); // 모달 활성화
+        });
+    });
+
+    // 닫기 버튼 클릭 시 모달 닫기
+    closeButton.addEventListener("click", () => {
+        modal.classList.remove("active");
+    });
+
+    // 모달 바깥을 클릭하면 닫기
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+});

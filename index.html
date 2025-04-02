@@ -324,11 +324,6 @@
                         </li>
 
                         <li>
-                            <p class="txt-hide">slack</p>
-                            <img src="./img/icon/slack.png" alt="slack">
-                        </li>
-
-                        <li>
                             <p class="txt-hide">github</p>
                             <img src="./img/icon/github.png" alt=" github">
                         </li>
@@ -367,8 +362,8 @@
                         <div class="portfolio-list-lf-txt">
                             <p>
                                 119reo는 소방관들의 용기가 담긴 폐방화복을 업사이클링하여 새로운 패션 아이템으로 재탄생시키는 브랜드입니다.
-기존 홈페이지에서는 고유한 브랜드 정체성이 분명히 드러나지 않아, 이를 해결하고자 브랜드의 가치와 철학을
-강조할 수 있도록 페이지 구조를 재설계 했습니다. 소방관의 강렬한 용기와 따스한 마음을 바탕으로 오렌지 색상을 메인 색상으로 추출했습니다. 
+                                기존 홈페이지에서는 고유한 브랜드 정체성이 분명히 드러나지 않아, 이를 해결하고자 브랜드의 가치와 철학을
+                                강조할 수 있도록 페이지 구조를 재설계 했습니다. 소방관의 강렬한 용기와 따스한 마음을 바탕으로 오렌지 색상을 메인 색상으로 추출했습니다. 
                             </p>
                         </div> 
 
@@ -547,35 +542,51 @@
 
         <!-- poster -->
         <section id="poster" class="poster">
-            <ul class="long">
-                <li>
-                    <img src="./img/poster-img-1.jpg" alt="poster img">
-                </li>
-                <li>
-                    <img src="./img/poster-img-2.jpg" alt="poster img">
-                </li>
-                <li>
-                    <img src="./img/poster-img-3.jpg" alt="poster img">
-                </li>
-                <li>
-                    <img src="./img/poster-img-4.jpg" alt="poster img">
-                </li>
-            </ul>
+            <span class="trigger poster-trigger"></span>
 
-            <ul class="short">
-                <li>
-                    <img src="./img/poster-img-5.jpg" alt="poster img">
-                </li>
-                <li>
-                    <img src="./img/poster-img-6.png" alt="poster img">
-                </li>
-                <li>
-                    <img src="./img/poster-img-7.jpg" alt="poster img">
-                </li>
-                <li>
-                    <img src="./img/poster-img-8.jpg" alt="poster img">
-                </li>
-            </ul>
+            <div class="poster-box">
+                <ul class="long">
+                    <li class="poster-1">
+                        <img src="./img/poster-img-1.jpg" alt="poster img">
+                    </li>
+                    <li class="poster-2">
+                        <img src="./img/poster-img-2.jpg" alt="poster img">
+                    </li>
+                    <li class="poster-3">
+                        <img src="./img/poster-img-3.jpg" alt="poster img">
+                    </li>
+                    <li class="poster-4">
+                        <img src="./img/poster-img-4.jpg" alt="poster img">
+                    </li>
+                </ul>
+    
+                <ul class="short">
+                    <li>
+                        <img src="./img/poster-img-5.jpg" alt="poster img">
+                    </li>
+                    <li>
+                        <img src="./img/poster-img-6.png" alt="poster img">
+                    </li>
+                    <li>
+                        <img src="./img/poster-img-7.jpg" alt="poster img">
+                    </li>
+                    <li>
+                        <img src="./img/poster-img-8.jpg" alt="poster img">
+                    </li>
+                </ul>
+            </div>
+           
+            <!-- poster -->
+            <div class="poster-modal">
+                <div class="modal-content">
+                    <div class="modal-content-inner">
+                        <button type="button" class="close-btn">닫기</button>
+                        <div class="modal-content-long">
+                            <img id="modal-img" src="" alt="poster img">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <!-- contact -->

@@ -42,7 +42,6 @@ span {
 
 dd, p, a {
   letter-spacing: -0.5px;
-  line-height: 1.5;
   font-size: 1.6rem;
   word-break: keep-all;
 }
@@ -785,10 +784,11 @@ button {
 .portfolio-list-lf-txt {
   position: relative;
   width: 100%;
-  height: 20rem;
+  height: 25rem;
   padding: 4rem 2rem 2rem 2rem;
   box-sizing: border-box;
   margin: 4rem 0 6rem 0;
+  border-radius: 1.6rem;
   background-color: #f1f1f1;
   box-sizing: border-box;
 }
@@ -811,7 +811,7 @@ button {
   animation: pencil 1s ease infinite alternate-reverse;
 }
 .portfolio-list-lf-txt p {
-  height: 14rem;
+  height: 16rem;
   color: #1c1c1b;
   overflow-y: scroll;
 }
@@ -857,42 +857,87 @@ button {
 }
 .portfolio-list-rt img {
   position: absolute;
-  right: -4rem;
+  right: 0rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-45%);
   width: auto;
-  height: 50rem;
+  height: 48rem;
 }
 
 /* poster */
 #poster {
+  position: relative;
   max-width: 144rem;
   margin: 0 auto;
   padding: 8rem 0;
   box-sizing: border-box;
 }
 #poster .long {
-  margin: 0 0 2.4rem 0;
+  margin-bottom: 2.4rem;
 }
-#poster .long li {
-  width: 33rem;
-  height: 40rem;
-}
-#poster .short li {
-  width: 33rem;
-  height: 33rem;
-}
-#poster ul {
+#poster .short, #poster .long {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-#poster ul li {
-  border-radius: 2rem;
+#poster .long li {
+  width: 33rem;
 }
-#poster ul li img {
+#poster .short li {
+  width: 33rem;
+  height: 33rem; /* short 리스트는 33rem */
+}
+#poster li {
+  border-radius: 2rem;
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+#poster img {
   width: 100%;
   height: 100%;
+}
+#poster .poster-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#poster .poster-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+#poster .poster-modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#poster .poster-modal .modal-content-inner {
+  position: relative;
+}
+#poster .poster-modal .modal-content-inner .close-btn {
+  position: absolute;
+  right: 0rem;
+  top: -2.5rem;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#poster .poster-modal .modal-content-long {
+  width: 50rem;
+}
+#poster .poster-modal .modal-content-long img {
+  width: 100%;
+  box-shadow: 0 0 1rem #000;
 }
 
 .profile {
