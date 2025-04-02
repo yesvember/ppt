@@ -213,6 +213,7 @@ let observerPoster = new IntersectionObserver((entries) => {
 observerPoster.observe(posterTrigger);
 
 
+// poster 차례대로 열기
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.querySelector(".poster-modal"); // 하나의 모달만 사용
     const modalImg = document.getElementById("modal-img");
@@ -223,17 +224,15 @@ document.addEventListener("DOMContentLoaded", () => {
     modalTriggers.forEach((li) => {
         li.addEventListener("click", () => {
             const imgSrc = li.querySelector("img").src; // 클릭한 이미지의 src 가져오기
-            modalImg.src = imgSrc; // 모달 이미지 변경
-            modal.classList.add("active"); // 모달 활성화
+            modalImg.src = imgSrc; // 모달 이미지를 클릭한 li의 이미지 src로 변경하기
+            modal.classList.add("active"); 
         });
     });
 
-    // 닫기 버튼 클릭 시 모달 닫기
     closeButton.addEventListener("click", () => {
         modal.classList.remove("active");
     });
 
-    // 모달 바깥을 클릭하면 닫기
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.classList.remove("active");
