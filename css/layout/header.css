@@ -1,0 +1,214 @@
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 0.8rem 4rem 0 4rem;
+  z-index: 9999;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--primary-yellow);
+}
+.header__left {
+  display: flex;
+}
+.logo > a {
+  padding: 1.2rem 2.4rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.header__menu {
+  display: flex;
+}
+.header__menu-list {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.header__menu-list > a {
+  position: relative;
+  padding: 1.5rem 2.4rem;
+}
+
+/* header mobile menu open btn */
+.header__menu-m {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.8rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--primary-yellow);
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.2s ease-in-out, left 0.2s ease-in-out,
+    right 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+.header__menu-m > div {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.header__menu-m > div > span {
+  position: absolute;
+  width: 100%;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: var(--secondary-indigo);
+}
+.header__menu-m > div > span:nth-of-type(1) {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.header__menu-m > div > span:nth-of-type(2) {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.header__menu-m > div > span:nth-of-type(3) {
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+/* header mobile */
+.menu__m.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu__m {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  color: var(--primary-yellow);
+  background-color: var(--secondary-indigo);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+.header__menu-close {
+  position: absolute;
+  left: 50%;
+  top: 10rem;
+  transform: translateX(-50%);
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: var(--primary-yellow);
+  border-radius: 100%;
+}
+.header__menu-close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(../../img/close.svg) center center no-repeat;
+  background-size: cover;
+  transition: transform .2s ease-in-out;
+}
+.header__menu-close:hover::after {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.menu__m > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  height: 100%;
+}
+.menu__m-list {
+  position: relative;
+  width: 50%;
+  font-size: 8vw;
+  text-transform: capitalize;
+  text-align: center;
+}
+.menu__m-list > a {
+  font-family: "Meditative", sans-serif;
+}
+.menu__m-list > a::before,
+.menu__m-list > a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: .1rem;
+  border-radius: 100%;
+  background-color: var(--primary-yellow);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out;
+}
+.menu__m-list > a::before {
+  left: 1rem;
+}
+.menu__m-list > a::after {
+  right: 1rem;
+}
+.menu__m-list:hover > a::before {
+  left: 2rem;
+  opacity: 1;
+}
+.menu__m-list:hover > a::after {
+  right: 2rem;
+  opacity: 1;
+}
+
+/* same */
+.logo,
+.header__menu-list > a {
+  font-family: "Lora", serif;
+  letter-spacing: -1px;
+  border-radius: 0 0 1rem 1rem;
+  color: var(--secondary-indigo);
+  background-color: var(--primary-yellow);
+}
+.logo:hover,
+.header__menu-list > a:hover {
+  color: var(--primary);
+}
+
+/* media */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.4rem 0rem 0 0rem;
+  }
+  .logo {
+    border-radius: 0 0 1rem 0rem;
+  }
+  .logo > a {
+    padding: 1rem 2rem;
+  }
+  .header__menu {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header__menu-m {
+    opacity: 1;
+    visibility: visible;
+  }
+  .header__menu-m > div {
+    height: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+}
+@media (max-width: 320px) {
+}

@@ -1,0 +1,240 @@
+/* css */
+@import url(./base/reset.css);
+@import url(./base/var.css);
+@import url(./base/font.css);
+@import url(./components/button.css);
+@import url(./effects/animation.css);
+@import url(./effects/deco.css);
+@import url(./layout/contact.css);
+
+body {
+  background-color: var(--primary);
+}
+
+/* header */
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--primary-yellow);
+}
+.header__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 4rem;
+  top: 0.8rem;
+  padding: 1rem 2.4rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--primary-yellow);
+}
+
+.header__btn>span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 100%;
+  background-color: var(--secondary-indigo);
+}
+.header__btn>span::after {
+  content: '';
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../img/prev.svg) center center no-repeat;
+  background-size: contain;
+}
+
+
+/* main */
+section {
+  height: auto;
+  padding: 12rem 2rem 0rem 2rem;
+}
+.section-title {
+  margin-bottom: 12rem;
+  font-size: 4vw;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: inherit;
+}
+.contents__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+.section__contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8rem;
+  padding: 12rem 0;
+  border-radius: 2rem;
+  background-color: var(--primary-yellow);
+}
+.section__contents::after {
+  left: 2rem;
+}
+.section__contents::before {
+  right: 2rem;
+}
+.section__contents>div {
+  position: relative;
+  overflow: hidden;
+}
+
+/* top */
+.contents__top{
+  overflow: hidden;
+}
+.contents__img-wrap {
+  overflow: hidden;
+}
+.contents__img-wrap > img {
+  max-width: 90rem;
+}
+/* bottom */
+.contents__bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 4rem;
+  width: 60%;
+  color: var(--secondary-indigo);
+}
+.contents__num {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--primary-yellow);
+}
+.contents__title {
+  font-weight: 800;
+  font-family: "Noto Sans", sans-serif;
+  text-transform: capitalize;
+  color: var(--secondary-indigo);
+}
+.contents__decs {
+  font-weight: 500;
+  line-height: 1.8;
+}
+.contents__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.contents__info-item {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 6rem;
+}
+
+.contents__info-item>dt {
+  width: 10rem;
+  font-weight: 800;
+}
+
+.skills__list-wrap {
+  display: flex;
+  column-gap: 0.4rem;
+}
+
+.skills__list>span {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  border: .1rem solid var(--secondary-indigo);
+}
+
+.skills__list:hover>span {
+  animation: swing 1s ease-in-out;
+}
+
+
+/* btn */
+.contents__btn-wrap {
+  display: flex;
+  column-gap: 0.4rem;
+  margin-top: 4rem;
+}
+
+.contents__btn-wrap>a {
+  border-radius: inherit;
+}
+
+.btn-muvic {
+  width: 100%;
+  max-width: 39.6rem;
+}
+
+/* deco */
+.empty-m {
+  display: none;
+}
+
+
+/* media */
+@media (max-width: 1200px) {
+  .contents__bottom{
+    width: 100%;
+  }
+ .section__contents {
+    padding: 12rem 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 6.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__btn {
+    left: 0rem;
+    top: 0rem;
+    padding: 1rem 2rem;
+    border-radius: 0 0 1rem 0rem;
+  }
+  section {
+    padding: 12rem 1.6rem 0 1.6rem;
+  }
+  .section__contents {
+    padding: 12rem 1.6rem;
+  }
+  .section-title {
+    font-size: 4.8rem;
+    margin-bottom: 8rem;
+  }
+  .contents__img-wrap > img {
+    width: 100%;
+    max-width: none;
+  }
+  .contents__btn-wrap {
+    flex-direction: column;
+    row-gap: 1rem;
+    column-gap: inherit;
+  }
+  .contents__btn-wrap>a {
+    width: 100%;
+    border-radius: inherit;
+  }
+  .btn-muvic {
+    max-width: inherit;
+  }
+  .empty-m {
+    display: block;
+  }
+}

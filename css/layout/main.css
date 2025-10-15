@@ -1,0 +1,73 @@
+/* 큰 글씨 32px, 작은 제목 24px, 설명 18px, 데코 12px */
+/* 큰 글씨 11vw -> 14vw */
+/* 데코 글씨 18px -> 16px */
+.section-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 10vw;
+  background-color: var(--primary);
+  border-left: 1rem solid var(--primary-yellow);
+  border-right: 1rem solid var(--primary-yellow);
+}
+.main__contents {
+  position: relative;
+}
+.main__text-wrap {
+  overflow: hidden;
+}
+.main__text {
+  animation: textUp 1s ease-in-out;
+}
+.main__text-inner {
+  display: inline-block;
+  will-change: transform;
+}
+.main__deco {
+  position: absolute;
+  right: 2rem;
+  bottom: 4rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--primary-yellow);
+}
+.main__deco > span {
+  opacity: 0;
+}
+.main__deco-01 {
+  animation: deco 0.8s ease-in-out infinite;
+  animation-delay: 3s;
+}
+.main__deco-02 {
+  animation: deco 0.8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+.main__deco-03 {
+  animation: deco 0.8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.empty-m {
+  display: none;
+}
+
+
+/* media */
+@media (max-width: 768px) {
+  .main__text-01,
+  .main__text-02 {
+    font-size: 14vw;
+    text-align: center;
+  }
+  .main__deco {
+    position: absolute;
+    right: 2rem;
+    bottom: -6rem;
+    font-size: 1rem;
+  }
+  .empty-m {
+    display: block;
+  }
+}

@@ -1,0 +1,116 @@
+.section-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 4rem;
+  background-color: var(--primary-yellow);
+}
+.intro__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 8%;
+}
+.intro__title {
+  text-transform: capitalize;
+  color: var(--secondary-indigo);
+}
+.intro__left > p {
+  margin: 2.4rem 0 6rem 0;
+  max-width: 55rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--secondary-indigo);
+}
+.intro-empty {
+  display: none;
+}
+
+/* 이미지 */
+.intro__right {
+}
+.intro__img-wrap {
+  position: relative;
+  max-width: 65rem;
+  aspect-ratio: 1 / 1;
+  border: 0.1rem solid var(--secondary-indigo);
+  overflow: hidden;
+}
+.intro__slide-top,
+.intro__slide-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98%;
+  height: 2rem;
+  background: url(../../img/intro-2.png) center center repeat-x;
+  background-size: cover;
+}
+.intro__slide-top {
+  top: 1rem;
+  animation: slide 40s linear infinite alternate-reverse;
+}
+.intro__slide-bottom {
+  bottom: 1rem;
+  animation: slide 40s linear infinite alternate;
+}
+
+/* media */
+/* 1200px */
+@media (max-width: 1200px) {
+  .intro__left {
+    padding-right: 2%;
+  }
+  .intro-empty {
+    display: block;
+  }
+}
+/* 1024px */
+@media (max-width: 1024px) {
+  .section-intro {
+    flex-direction: column;
+    column-gap: inherit;
+    row-gap: 8rem;
+    padding: 18rem 2rem;
+  }
+  .section-intro > div {
+    width: 100%;
+  }
+  .intro__left {
+    align-items: center;
+    padding-right: 0%;
+  }
+  .intro__title {
+    text-align: center;
+  }
+   .intro-empty {
+    display: none;
+  }
+  .intro__left > p {
+    max-width: 80%;
+    text-align: center;
+  }
+  .intro__img-wrap {
+    width: 100%;
+    max-width: inherit;
+    aspect-ratio: 4 / 2.5;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .section-intro {
+    padding: 18rem 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .intro__left > p {
+    max-width: 100%;
+    font-size: 1.6rem;
+  }
+  .intro__img-wrap {
+    aspect-ratio: 1 / 1;
+  }
+}

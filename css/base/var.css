@@ -1,0 +1,15 @@
+:root {
+  /* 기본 색상  */
+  --white: #fafafa;
+  --smoke-white: #f1f1f1;
+  --white-transparent: rgba(255, 255, 255, 0.2);
+  --black: #222;
+  --gray: #7190a5;
+
+  --primary: #91c8e4; /* 메인 컬러 */
+  --primary-yellow: #fffbde;
+  --secondary-pink: #f7e2e2;
+  --secondary-sky-light: #e5eef4;
+  --secondary-sky: #749bc2;
+  --secondary-indigo: #4682a9;
+}
