@@ -56,7 +56,7 @@ workTl
   .fromTo(".work-deco", 
     { rotate: 360 }, 
     { rotate: 0, ease: "none" },
-    "<" // 동시에 실행
+    "<"
   );
 
 
@@ -80,7 +80,7 @@ contactTl
   .fromTo(".contact__text__ani-02", 
     { x: -400, opacity: 0 }, 
     { x: 0, opacity: 1, ease: "power2.out" },
-    "<" // 동시에 실행
+    "<"
   );
 
 
