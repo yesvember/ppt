@@ -67,7 +67,7 @@
 
 @media (max-width: 1024px) {
   .mouse {
-    /* opacity: 0;
-    visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
   }
 }
