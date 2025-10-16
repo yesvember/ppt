@@ -1,9 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener("resize", () => {
-  ScrollTrigger.refresh();
-});
-
 // main 
 gsap.timeline({
   scrollTrigger: {

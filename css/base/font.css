@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Meditative";
   src: url("../../font/Meditative.ttf") format("truetype");
+  font-display: swap;
 }
 
 /* 제목 */
