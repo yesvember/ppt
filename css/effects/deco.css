@@ -1,3 +1,4 @@
+/* mouse */
 .mouse {
   position: fixed;
   left: 50%;
@@ -54,6 +55,7 @@
   mix-blend-mode: difference;
 }
 
+/* 뷰포트 bottom text slide */
 .fixed-footer-text {
   position: fixed;
   width: 100%;
