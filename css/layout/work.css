@@ -240,7 +240,12 @@
     padding: 18rem 1.6rem;
   }
 }
-
+@media (max-width : 768px) {
+  .work-deco {
+    width: 10rem;
+    height: 10rem;
+  }
+}
 @media (max-width: 480px) {
   .work__intro-right > h2 {
     font-size: 6.4rem;

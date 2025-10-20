@@ -8,19 +8,23 @@
 @import url(./layout/contact.css);
 
 body {
-  position: relative;
   background-color: var(--primary);
 }
 
 /* quick 버튼 */
 .quick {
-  position: fixed;
-  right: 4rem;
-  top: 50%;
-  transform: translateY(-50%);
+  position: sticky;
+  top: 80%;
+  padding: 0 4rem 4rem 0;
   z-index: 9999;
 }
-.quick > a {
+.quick__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  row-gap: 1.4rem;
+}
+.quick__inner > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,10 +34,7 @@ body {
   background-color: var(--primary);
   box-shadow: 0 0 1rem #fffbde;
 }
-.quick-top {
-  margin-bottom: 1.4rem;
-}
-.quick > a > span {
+.quick__inner > a > span {
   width: 1.4rem;
   height: 1.4rem;
   background: url(.././img/prev-2.svg)center center no-repeat;
@@ -45,7 +46,6 @@ body {
   background-size: contain;
   transform: rotate(180deg);
 }
-
 /* header */
 .header {
   position: fixed;
@@ -92,6 +92,9 @@ body {
 
 
 /* main */
+#main {
+  border: 1px solid red;
+}
 section {
   height: auto;
   padding: 12rem 2rem 0rem 2rem;
@@ -232,11 +235,17 @@ section {
   }
 }
 @media (max-width: 1024px) {
+  .quick {
+    padding: 0 2rem 4rem 0;
+  }
   .section-title {
     font-size: 6.4rem;
   }
 }
 @media (max-width: 768px) {
+  .quick {
+    padding: 0 1.6rem 4rem 0;
+  }
   .header__btn {
     left: 0rem;
     top: 0rem;

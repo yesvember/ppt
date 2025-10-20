@@ -41,14 +41,7 @@
 }
 @media (max-width: 868px) {
   .end__inner {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 3 / 4;
     padding: 18rem 0 6rem 0;
-    background: url(../../img/end-1.jpg) center center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    border: 0.1rem solid var(--secondary-pink);
   }
 }
 @media (max-width: 768px) {
