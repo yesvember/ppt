@@ -8,7 +8,42 @@
 @import url(./layout/contact.css);
 
 body {
+  position: relative;
   background-color: var(--primary);
+}
+
+/* quick 버튼 */
+.quick {
+  position: fixed;
+  right: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+.quick > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 100%;
+  background-color: var(--primary);
+  box-shadow: 0 0 1rem #fffbde;
+}
+.quick-top {
+  margin-bottom: 1.4rem;
+}
+.quick > a > span {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(.././img/prev-2.svg)center center no-repeat;
+}
+.quick-top-icon {
+  background-size: contain;
+}
+.quick-bottom-icon {
+  background-size: contain;
+  transform: rotate(180deg);
 }
 
 /* header */
