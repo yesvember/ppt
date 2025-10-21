@@ -17,6 +17,7 @@ body {
   top: 80%;
   padding: 0 4rem 4rem 0;
   z-index: 9999;
+  pointer-events: none;
 }
 .quick__inner {
   display: flex;
@@ -33,6 +34,7 @@ body {
   border-radius: 100%;
   background-color: var(--primary);
   box-shadow: 0 0 1rem #fffbde;
+  pointer-events: auto;
 }
 .quick__inner > a > span {
   width: 1.4rem;
@@ -46,6 +48,7 @@ body {
   background-size: contain;
   transform: rotate(180deg);
 }
+
 /* header */
 .header {
   position: fixed;
